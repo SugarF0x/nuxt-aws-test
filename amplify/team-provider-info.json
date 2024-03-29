@@ -9,11 +9,24 @@
       "UnauthRoleName": "amplify-amplify0c60de0a41114-staging-123025-unauthRole",
       "StackName": "amplify-amplify0c60de0a41114-staging-123025",
       "StackId": "arn:aws:cloudformation:eu-central-1:905418237499:stack/amplify-amplify0c60de0a41114-staging-123025/1ebe63a0-edc8-11ee-96f6-02de00242a19",
-      "AmplifyAppId": "d2ky6h55adlqxp"
+      "AmplifyAppId": "d2ky6h55adlqxp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
         "nuxtawstest": {}
+      },
+      "function": {
+        "nuxtawsteste3d97cbf": {
+          "deploymentBucketName": "amplify-amplify0c60de0a41114-staging-123025-deployment",
+          "s3Key": "amplify-builds/nuxtawsteste3d97cbf-63383030496e77567448-build.zip"
+        }
+      },
+      "storage": {
+        "dynamo98ca0df4": {}
+      },
+      "api": {
+        "nuxtawstestamplifyapi": {}
       }
     }
   }

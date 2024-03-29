@@ -1,4 +1,20 @@
 {
+  "api": {
+    "nuxtawstestamplifyapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "nuxtawsteste3d97cbf"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "nuxtawstest": {
       "customAuth": false,
@@ -28,6 +44,51 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "nuxtawsteste3d97cbf": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamo98ca0df4"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nuxtawsteste3d97cbf_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nuxtawsteste3d97cbf"
+        }
+      ]
+    },
+    "AMPLIFY_function_nuxtawsteste3d97cbf_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nuxtawsteste3d97cbf"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamo98ca0df4": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

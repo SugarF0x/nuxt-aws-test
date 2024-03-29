@@ -1,0 +1,14 @@
+{
+  "resourceName": "dynamo98ca0df4",
+  "tableName": "dynamo98ca0df4",
+  "partitionKey": {
+    "fieldName": "title",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "created_at",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
