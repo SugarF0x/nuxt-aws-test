@@ -1,0 +1,60 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify0c60de0a41114-staging-123025-authRole",
+      "UnauthRoleArn": "arn:aws:iam::905418237499:role/amplify-amplify0c60de0a41114-staging-123025-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::905418237499:role/amplify-amplify0c60de0a41114-staging-123025-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-amplify0c60de0a41114-staging-123025-deployment",
+      "UnauthRoleName": "amplify-amplify0c60de0a41114-staging-123025-unauthRole",
+      "StackName": "amplify-amplify0c60de0a41114-staging-123025",
+      "StackId": "arn:aws:cloudformation:eu-central-1:905418237499:stack/amplify-amplify0c60de0a41114-staging-123025/1ebe63a0-edc8-11ee-96f6-02de00242a19",
+      "AmplifyAppId": "d2ky6h55adlqxp"
+    }
+  },
+  "auth": {
+    "nuxtawstest": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "eu-central-1_rDcZ6JSNt",
+        "AppClientIDWeb": "4hggqulhp6o1ibprqt6o7qinij",
+        "AppClientID": "7joe1b44qg921u2ql4t6oennug",
+        "IdentityPoolId": "eu-central-1:867fcedd-28f8-4789-9fa9-d05ecfd97539",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:905418237499:userpool/eu-central-1_rDcZ6JSNt",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "nuxtawstest"
+      },
+      "lastPushTimeStamp": "2024-03-29T12:51:02.776Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/auth/nuxtawstest-cloudformation-template.json",
+        "logicalId": "authnuxtawstest"
+      }
+    }
+  }
+}
