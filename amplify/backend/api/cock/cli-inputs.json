@@ -1,9 +1,9 @@
 {
   "version": 1,
   "paths": {
-    "/api/items": {
-      "name": "/api/items",
-      "lambdaFunction": "nuxtawsteste3d97cbf",
+    "/cocks": {
+      "name": "/cocks",
+      "lambdaFunction": "cockfunc",
       "permissions": {
         "setting": "open"
       }

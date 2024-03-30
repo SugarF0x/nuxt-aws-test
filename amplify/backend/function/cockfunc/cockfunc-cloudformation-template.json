@@ -16,13 +16,13 @@
     "s3Key": {
       "Type": "String"
     },
-    "storagedynamo98ca0df4Name": {
+    "storagecockdbName": {
       "Type": "String",
-      "Default": "storagedynamo98ca0df4Name"
+      "Default": "storagecockdbName"
     },
-    "storagedynamo98ca0df4Arn": {
+    "storagecockdbArn": {
       "Type": "String",
-      "Default": "storagedynamo98ca0df4Arn"
+      "Default": "storagecockdbArn"
     }
   },
   "Conditions": {
@@ -55,12 +55,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "nuxtawsteste3d97cbf",
+            "cockfunc",
             {
               "Fn::Join": [
                 "",
                 [
-                  "nuxtawsteste3d97cbf",
+                  "cockfunc",
                   "-",
                   {
                     "Ref": "env"
@@ -97,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "nuxtawstestLambdaRole8a9f3466",
+            "nuxtawstestLambdaRolef415d245",
             {
               "Fn::Join": [
                 "",
                 [
-                  "nuxtawstestLambdaRole8a9f3466",
+                  "nuxtawstestLambdaRolef415d245",
                   "-",
                   {
                     "Ref": "env"
@@ -182,14 +182,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storagedynamo98ca0df4Arn"
+                  "Ref": "storagecockdbArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storagedynamo98ca0df4Arn"
+                        "Ref": "storagecockdbArn"
                       },
                       "index/*"
                     ]

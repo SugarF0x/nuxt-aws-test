@@ -17,13 +17,16 @@
         "nuxtawstest": {}
       },
       "function": {
-        "nuxtawsteste3d97cbf": {
+        "cockfunc": {
           "deploymentBucketName": "amplify-amplify0c60de0a41114-staging-123025-deployment",
-          "s3Key": "amplify-builds/nuxtawsteste3d97cbf-63383030496e77567448-build.zip"
+          "s3Key": "amplify-builds/cockfunc-72686767796573472f44-build.zip"
         }
       },
       "storage": {
-        "dynamo98ca0df4": {}
+        "cockdb": {}
+      },
+      "api": {
+        "cock": {}
       }
     }
   }

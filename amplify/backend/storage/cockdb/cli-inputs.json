@@ -1,0 +1,10 @@
+{
+  "resourceName": "cockdb",
+  "tableName": "cocks",
+  "partitionKey": {
+    "fieldName": "owner",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
