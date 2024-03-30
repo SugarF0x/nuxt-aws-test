@@ -13,6 +13,19 @@
           "delete"
         ]
       }
+    },
+    "/dynamo/items": {
+      "name": "/dynamo/items",
+      "lambdaFunction": "nuxtawsteste3d97cbf",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

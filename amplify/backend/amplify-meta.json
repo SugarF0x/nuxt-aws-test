@@ -140,7 +140,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/nuxtawstestamplifyapi-cloudformation-template.json",
         "logicalId": "apinuxtawstestamplifyapi"
       },
-      "lastPushTimeStamp": "2024-03-29T13:41:59.922Z",
+      "lastPushTimeStamp": "2024-03-30T12:23:58.192Z",
       "output": {
         "ApiName": "nuxtawstestamplifyapi",
         "RootUrl": "https://18nsr05dwc.execute-api.eu-central-1.amazonaws.com/staging",

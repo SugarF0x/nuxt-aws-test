@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = useFetch('/api/dynamo/items')
+const { data } = await useFetch('/dynamo/items')
 </script>
 
 <template>
