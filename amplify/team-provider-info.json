@@ -24,9 +24,6 @@
       },
       "storage": {
         "dynamo98ca0df4": {}
-      },
-      "api": {
-        "nuxtawstestamplifyapi": {}
       }
     }
   }
