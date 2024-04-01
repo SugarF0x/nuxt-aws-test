@@ -1,6 +1,6 @@
 {
   "api": {
-    "cock": {
+    "testapi": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "cockfunc"
+          "resourceName": "nuxtawstestda25897a"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -47,7 +47,7 @@
     }
   },
   "function": {
-    "cockfunc": {
+    "nuxtawstestda25897a": {
       "build": true,
       "dependsOn": [
         {
@@ -60,7 +60,7 @@
             "Arn"
           ],
           "category": "storage",
-          "resourceName": "cockdb"
+          "resourceName": "testdynamo"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -68,25 +68,25 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_cockfunc_deploymentBucketName": {
+    "AMPLIFY_function_nuxtawstestda25897a_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "cockfunc"
+          "resourceName": "nuxtawstestda25897a"
         }
       ]
     },
-    "AMPLIFY_function_cockfunc_s3Key": {
+    "AMPLIFY_function_nuxtawstestda25897a_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "cockfunc"
+          "resourceName": "nuxtawstestda25897a"
         }
       ]
     }
   },
   "storage": {
-    "cockdb": {
+    "testdynamo": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
     }

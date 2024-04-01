@@ -1,8 +1,8 @@
 {
-  "resourceName": "cockdb",
-  "tableName": "cocks",
+  "resourceName": "testdynamo",
+  "tableName": "testtable",
   "partitionKey": {
-    "fieldName": "owner",
+    "fieldName": "uuid",
     "fieldType": "string"
   },
   "gsi": [],

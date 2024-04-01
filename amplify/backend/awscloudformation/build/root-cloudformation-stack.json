@@ -152,6 +152,27 @@
         }
       }
     },
+    "APIGatewayAuthStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+        "Parameters": {
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "env": "staging",
+          "testapi": {
+            "Fn::GetAtt": [
+              "apitestapi",
+              "Outputs.ApiId"
+            ]
+          }
+        }
+      }
+    },
     "authnuxtawstest": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -210,34 +231,34 @@
         }
       }
     },
-    "storagecockdb": {
+    "storagetestdynamo": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/storage/cockdb-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/storage/testdynamo-cloudformation-template.json",
         "Parameters": {
-          "tableName": "cocks",
-          "partitionKeyName": "owner",
+          "tableName": "testtable",
+          "partitionKeyName": "uuid",
           "partitionKeyType": "S",
           "env": "staging"
         }
       }
     },
-    "functioncockfunc": {
+    "functionnuxtawstestda25897a": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/function/cockfunc-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/function/nuxtawstestda25897a-cloudformation-template.json",
         "Parameters": {
           "deploymentBucketName": "amplify-amplify0c60de0a41114-staging-123025-deployment",
-          "s3Key": "amplify-builds/cockfunc-72686767796573472f44-build.zip",
-          "storagecockdbName": {
+          "s3Key": "amplify-builds/nuxtawstestda25897a-7456436a385379664962-build.zip",
+          "storagetestdynamoName": {
             "Fn::GetAtt": [
-              "storagecockdb",
+              "storagetestdynamo",
               "Outputs.Name"
             ]
           },
-          "storagecockdbArn": {
+          "storagetestdynamoArn": {
             "Fn::GetAtt": [
-              "storagecockdb",
+              "storagetestdynamo",
               "Outputs.Arn"
             ]
           },
@@ -245,20 +266,20 @@
         }
       }
     },
-    "apicock": {
+    "apitestapi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/cock-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/testapi-cloudformation-template.json",
         "Parameters": {
-          "functioncockfuncName": {
+          "functionnuxtawstestda25897aName": {
             "Fn::GetAtt": [
-              "functioncockfunc",
+              "functionnuxtawstestda25897a",
               "Outputs.Name"
             ]
           },
-          "functioncockfuncArn": {
+          "functionnuxtawstestda25897aArn": {
             "Fn::GetAtt": [
-              "functioncockfunc",
+              "functionnuxtawstestda25897a",
               "Outputs.Arn"
             ]
           },

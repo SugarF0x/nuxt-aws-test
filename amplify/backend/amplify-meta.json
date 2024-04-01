@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-amplify0c60de0a41114-staging-123025-unauthRole",
       "StackName": "amplify-amplify0c60de0a41114-staging-123025",
       "StackId": "arn:aws:cloudformation:eu-central-1:905418237499:stack/amplify-amplify0c60de0a41114-staging-123025/1ebe63a0-edc8-11ee-96f6-02de00242a19",
-      "AmplifyAppId": "d2ky6h55adlqxp"
+      "AmplifyAppId": "d2ky6h55adlqxp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     }
   },
   "auth": {
@@ -50,7 +51,7 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "nuxtawstest"
       },
-      "lastPushTimeStamp": "2024-03-30T13:07:22.356Z",
+      "lastPushTimeStamp": "2024-04-01T09:43:03.991Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/auth/nuxtawstest-cloudformation-template.json",
         "logicalId": "authnuxtawstest"
@@ -58,34 +59,34 @@
     }
   },
   "storage": {
-    "cockdb": {
+    "testdynamo": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/storage/cockdb-cloudformation-template.json",
-        "logicalId": "storagecockdb"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/storage/testdynamo-cloudformation-template.json",
+        "logicalId": "storagetestdynamo"
       },
-      "lastPushTimeStamp": "2024-03-30T13:07:24.755Z",
+      "lastPushTimeStamp": "2024-04-01T09:43:06.316Z",
       "output": {
-        "PartitionKeyName": "owner",
+        "PartitionKeyName": "uuid",
         "Region": "eu-central-1",
-        "Arn": "arn:aws:dynamodb:eu-central-1:905418237499:table/cocks-staging",
-        "StreamArn": "arn:aws:dynamodb:eu-central-1:905418237499:table/cocks-staging/stream/2024-03-30T13:04:25.614",
+        "Arn": "arn:aws:dynamodb:eu-central-1:905418237499:table/testtable-staging",
+        "StreamArn": "arn:aws:dynamodb:eu-central-1:905418237499:table/testtable-staging/stream/2024-04-01T09:39:36.884",
         "PartitionKeyType": "S",
-        "Name": "cocks-staging"
+        "Name": "testtable-staging"
       },
-      "lastPushDirHash": "sgKkl7d2dk/B8c5EdFPUaR+lmQQ="
+      "lastPushDirHash": "bWkUzJ84K/lWurWOiBKCWBSBT0w="
     }
   },
   "function": {
-    "cockfunc": {
+    "nuxtawstestda25897a": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
       "dependsOn": [
         {
           "category": "storage",
-          "resourceName": "cockdb",
+          "resourceName": "testdynamo",
           "attributes": [
             "Name",
             "Arn"
@@ -96,37 +97,37 @@
           }
         }
       ],
-      "lastBuildTimeStamp": "2024-03-30T13:04:12.207Z",
+      "lastBuildTimeStamp": "2024-04-01T09:39:23.558Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2024-03-30T13:04:13.140Z",
-      "distZipFilename": "cockfunc-72686767796573472f44-build.zip",
+      "lastPackageTimeStamp": "2024-04-01T09:39:24.480Z",
+      "distZipFilename": "nuxtawstestda25897a-7456436a385379664962-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-amplify0c60de0a41114-staging-123025-deployment",
-        "s3Key": "amplify-builds/cockfunc-72686767796573472f44-build.zip"
+        "s3Key": "amplify-builds/nuxtawstestda25897a-7456436a385379664962-build.zip"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/function/cockfunc-cloudformation-template.json",
-        "logicalId": "functioncockfunc"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/function/nuxtawstestda25897a-cloudformation-template.json",
+        "logicalId": "functionnuxtawstestda25897a"
       },
-      "lastPushTimeStamp": "2024-03-30T13:07:24.755Z",
+      "lastPushTimeStamp": "2024-04-01T09:43:06.316Z",
       "output": {
-        "LambdaExecutionRoleArn": "arn:aws:iam::905418237499:role/nuxtawstestLambdaRolef415d245-staging",
+        "LambdaExecutionRoleArn": "arn:aws:iam::905418237499:role/nuxtawstestLambdaRoled668bd08-staging",
         "Region": "eu-central-1",
-        "Arn": "arn:aws:lambda:eu-central-1:905418237499:function:cockfunc-staging",
-        "Name": "cockfunc-staging",
-        "LambdaExecutionRole": "nuxtawstestLambdaRolef415d245-staging"
+        "Arn": "arn:aws:lambda:eu-central-1:905418237499:function:nuxtawstestda25897a-staging",
+        "Name": "nuxtawstestda25897a-staging",
+        "LambdaExecutionRole": "nuxtawstestLambdaRoled668bd08-staging"
       },
-      "lastPushDirHash": "fyQiS2Po2QkaKfqL3kFch9RKIsk="
+      "lastPushDirHash": "5NK9GO5wNUT0I40bguS3ecRJ2zc="
     }
   },
   "api": {
-    "cock": {
+    "testapi": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "cockfunc",
+          "resourceName": "nuxtawstestda25897a",
           "attributes": [
             "Name",
             "Arn"
@@ -134,16 +135,16 @@
         }
       ],
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/cock-cloudformation-template.json",
-        "logicalId": "apicock"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify0c60de0a41114-staging-123025-deployment/amplify-cfn-templates/api/testapi-cloudformation-template.json",
+        "logicalId": "apitestapi"
       },
-      "lastPushTimeStamp": "2024-03-30T13:07:24.755Z",
+      "lastPushTimeStamp": "2024-04-01T09:43:06.316Z",
       "output": {
-        "ApiName": "cock",
-        "RootUrl": "https://a4qfwgouji.execute-api.eu-central-1.amazonaws.com/staging",
-        "ApiId": "a4qfwgouji"
+        "ApiName": "testapi",
+        "RootUrl": "https://fujewgoqab.execute-api.eu-central-1.amazonaws.com/staging",
+        "ApiId": "fujewgoqab"
       },
-      "lastPushDirHash": "dGab7mD6ZwuUk2UDuwLChxFS99w="
+      "lastPushDirHash": "KA+9phalKUDhSxVR55wXClTl3rA="
     }
   }
 }
